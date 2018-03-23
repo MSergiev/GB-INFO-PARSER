@@ -40,7 +40,7 @@ private:
         ParseOLIC( file );
         ParseVNUM( file );
         ParseHCHECK( file );
-        ParseGCHECK( file );
+        //ParseGCHECK( file );
         ParseLogo( file );
         
     }
