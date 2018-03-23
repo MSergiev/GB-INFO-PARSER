@@ -55,7 +55,14 @@ private:    // Components
         PrintAttr( attr );
         char arr[ GetSize(attr) ];
         ReadData( file, arr, attr );
-        std::cout << std::endl;
+        bool compare = true;
+        for( unsigned i = 0; i < GetSize(attr); ++i ) {
+            if( (unsigned char)arr[i] != LOGO[i] ) {
+                compare = false;
+                break;
+            }
+        }
+        PrintCheck( compare );
         PrintLogo( arr );
         
     }
